@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StudentScores
 {
-    public partial class Form1 : Form
+    public partial class FrmStudentScores : Form
     {
-        public Form1()
+        public FrmStudentScores()
         {
             InitializeComponent();
         }
