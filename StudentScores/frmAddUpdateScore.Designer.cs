@@ -75,8 +75,10 @@
             // 
             // frmAddUpdateScore
             // 
+            this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(222, 97);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnCancel);
