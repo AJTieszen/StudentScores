@@ -52,6 +52,12 @@
     <Compile Include="frmAddNewStudent.Designer.cs">
       <DependentUpon>frmAddNewStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddUpdateScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUpdateScore.Designer.cs">
+      <DependentUpon>frmAddUpdateScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStudentScores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAddNewStudent.resx">
       <DependentUpon>frmAddNewStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUpdateScore.resx">
+      <DependentUpon>frmAddUpdateScore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStudentScores.resx">
       <DependentUpon>FrmStudentScores.cs</DependentUpon>
