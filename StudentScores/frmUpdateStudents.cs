@@ -33,20 +33,6 @@ namespace StudentScores
             }
             DisplayScores();
         }
-
-        private void DisplayScores()
-        {
-            lstStudentScores.Items.Clear();
-            if (scoreList.Count > 0)
-            {
-                foreach (int score in scoreList)
-                {
-                    lstStudentScores.Items.Add(score);
-                }
-                lstStudentScores.SelectedIndex = 0;
-            }
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Form addForm = new frmAddUpdateScore();
@@ -59,7 +45,6 @@ namespace StudentScores
                 DisplayScores();
             }
         }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             int selectedIndex = lstStudentScores.SelectedIndex;
@@ -79,6 +64,47 @@ namespace StudentScores
                     scoreList.Insert(selectedIndex, score);
                     DisplayScores();
                 }
+            }
+        }
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (scoreList.Count > 0 && lstStudentScores.SelectedIndex > -1)
+            {
+                scoreList.RemoveAt(lstStudentScores.SelectedIndex);
+                DisplayScores();
+            }
+        }
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            scoreList.Clear();
+            lstStudentScores.Items.Clear();
+        }
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            string studentScores = lblName.Text;
+            foreach (int score in scoreList)
+            {
+                studentScores += $"|{score}";
+            }
+
+            Tag = studentScores;
+            DialogResult = DialogResult.OK;
+        }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void DisplayScores()
+        {
+            lstStudentScores.Items.Clear();
+            if (scoreList.Count > 0)
+            {
+                foreach (int score in scoreList)
+                {
+                    lstStudentScores.Items.Add(score);
+                }
+                lstStudentScores.SelectedIndex = 0;
             }
         }
     }
